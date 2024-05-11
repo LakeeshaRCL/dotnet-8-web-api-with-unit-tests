@@ -124,14 +124,14 @@ public class UserControllerTest
 
         // return type of UserService's GetUserCount() method
         BaseResponse getUserCountBaseResponse = new BaseResponse(StatusCodes.Status200OK, 2);
-        userServiceMock.Setup(um => um.ListUsers()).Returns(getUserCountBaseResponse);
+        userServiceMock.Setup(um => um.GetUserCount()).Returns(getUserCountBaseResponse);
 
         // define controller using mocked service
         UserController userController = new UserController(userServiceMock.Object);
 
         // 2. Act
 
-        var getUserCountResponse = userController.ListUsers();
+        var getUserCountResponse = userController.GetUserCount();
 
 
         // 3. Assert
