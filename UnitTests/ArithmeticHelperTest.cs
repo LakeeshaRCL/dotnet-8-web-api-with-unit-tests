@@ -37,7 +37,7 @@ namespace UnitTests
 
 
 
-        [Theory(DisplayName = "Subtract shuould return double type output")]
+        [Theory(DisplayName = "Subtract should return double type output")]
         [InlineData(8.45, 10.96)]
         public void TestSubtractShouldReturnDouble(double number1, double number2)
         {
